@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 6 - Question 2</title>
+    <style>
+        * { 
+            margin : 0px;
+            padding : 0px;
+        }
+        .data{
+            font-family:'Times New Roman', Times, serif;
+            height : 500px;
+            width : 80%; /* Give in %, helps in page responsiveness */
+            background-color: lightgray;
+            margin-left: 10%;
+            margin-top: 10px;
+            padding : 20px;
+        }
+        .table{
+            border-collapse: collapse;
+            width : 100%;
+            border-color: black;
+            margin-top: 20px;
+        }
+        th,td{
+            height:40px;
+            text-align : center;
+            padding:5px;
+        }
+        .forms{
+            height:40px;
+            margin-top: 10px;
+        }
+        input{
+            padding-left: 2px;
+        }
+        button{
+            height:30px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-top: 40px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="data">
+
+        <h1>Bus Details</h1>
+        <!-- create forms to get input from user -->
+        <div class="forms" onsubmit="addBus(event)">
+        <form>
+            <input type="text" required placeholder="Name" id="name" />
+            <input type="text" required placeholder="Source" id="source" />
+            <input type="text" required placeholder="Destination" id="destination"/>
+            <input type="text"  required placeholder="Number" id="number"/>
+            <input type="number"  required placeholder="Passenger Capacity" id="passengercapacity"/>
+
+            <br><br>
+            <button type ="submit">Add Bus Details</button>
+            
+        </form>
+        </div>
+        <div class="forms">
+            <input type="text" placeholder="Start searching here" onkeyup="searchBySource()" id="search"/>
+        </div>
+
+        <br><br>    
+
+        <table border="1" class="table" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Sr no</th>
+                    <th>Name</th>
+                    <th>Source</th>
+                    <th>Destination</th>
+                    <th>Number</th>
+                    <th>Passenger Capacity</th>
+                </tr>
+            </thead>
+            <tbody class="tdata">
+               
+            </tbody>
+        </table>
+    </div>
+   
+    <script src= "Q2.js"></script>
+
+</body>
+</html>

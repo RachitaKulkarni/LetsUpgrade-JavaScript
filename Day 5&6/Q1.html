@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Day 6- Question 1</title>
+    <style>
+        * { /*as few elements in html will have margin & padding by default,we are restricting it. We can apply our own later. */
+            margin : 0px;
+            padding : 0px;
+        }
+        .data{
+            font-family:'Times New Roman', Times, serif;
+            height : 800px;
+            width : 80%; /* Give in %, helps in page responsiveness */
+            background-color: lightgray;
+            margin-left: 10%;
+            margin-top: 10px;
+            padding : 20px;
+        }
+        .table{
+            border-collapse: collapse;
+            width : 100%;
+            border-color: black;
+        }
+        th,td{
+            height:40px;
+            text-align : center;
+            padding:5px;
+        }
+        .forms{
+            height:40px;
+            margin-top: 10px;
+        }
+        input{
+            padding-left: 2px;
+        }
+        button{
+            height:30px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-top: 40px;
+        }
+  
+    </style>
+</head>
+<body>
+
+    <div class="data">
+
+        <h1>Super Heroes</h1>
+        
+        <div class="forms">
+            <input type="text" placeholder="Start searching here" onkeyup ="searchByName()" class="search"/>
+        </div>
+
+        <br><br>    
+
+        <table border="1" class="table" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Sr no</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>City</th>
+                    <th>Salary</th>
+                    <th>Actions</th> <!-- this was created to show delete functionality -->
+                </tr>
+            </thead>
+            <tbody class="tdata">
+                
+            </tbody>
+        </table>
+    </div>
+   
+<script src=Q1.js></script>
+    
+</body>
+</html>
